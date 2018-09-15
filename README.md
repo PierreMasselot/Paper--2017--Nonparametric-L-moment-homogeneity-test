@@ -1,4 +1,4 @@
-# 2017---Nonparametric-L-moment-homogeneity-test
+# Nonparametric-L-moment-homogeneity-test
 ***
 R code implementing the **Nonparametric L-moment homogeneity test** proposed in the article:
   
@@ -16,3 +16,5 @@ In the proposed version, the test statistic remain unchanged, but its null distr
   + *Region-wise*: a new pooled sample is created using Polya resampling and then the simulated sites are drawn from this new sample.
 
 All methodological details are found in the article cited above.
+
+See Help.md for a description of the arguments and examples on how to use the function.
