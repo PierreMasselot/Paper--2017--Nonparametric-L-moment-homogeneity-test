@@ -1,6 +1,6 @@
 
 # Lmom.homog.test
-## Nonparametric L-moment honogeneity test}
+## Nonparametric L-moment honogeneity test
 
 ### Description
   Performs the Nonparametric Hosking-Wallis L-moment homogeneity test. Includes the parametric procedure of Hosking and Wallis and several nonparametric procedures.  
