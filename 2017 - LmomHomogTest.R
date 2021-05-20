@@ -29,8 +29,8 @@ Lmom.homog.test <- function(X, Nsim = 500, type = "B", typenorm = "2", center = 
   # Centering the sites if requested
   if (center){
      mutot <- apply(matrix(sapply(X,apply,2,mean),nrow=P,ncol=N),1,mean)
-     Xcen <- sapply(X,scale,T,F)
-     Xcen <- sapply(Xcen,sweep,2,mutot,"+")
+     Xcen <- lapply(X,scale,T,F)
+     Xcen <- lapply(Xcen,sweep,2,mutot,"+")
   } else {
      Xcen <- X
   }
