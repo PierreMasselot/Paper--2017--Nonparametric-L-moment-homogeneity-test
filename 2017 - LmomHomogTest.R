@@ -69,7 +69,7 @@ Lmom.homog.test <- function(X, Nsim = 500, type = "B", typenorm = "2", center = 
             Usim <- as.matrix(runif(sum(nsite)))
          }
          Xsimtot <- matrix(NA,sum(nsite),P)
-         for (j in 1:P) Xsimtot[,j] <- quakap(Usim[,j], paramKappa[j,])
+         for (j in 1:P) Xsimtot[,j] <- lmom::quakap(Usim[,j], paramKappa[j,])
          Xsim[[b]] <- split(as.data.frame(Xsimtot),cut(1:sum(nsite),nsitecum,labels=1:N))
          Vsim[b] <- computeVstat(Xsim[[b]],typenorm=typenorm) # Test statistic
      }     

@@ -25,6 +25,8 @@
   The test is based on L-moments, which are linear combinations of order statistics and are analogous to classical moments. It is intended to test the homogeneity between a set of sites, up to a scale factor. Thus, the test statistic `V` is the weighted mean of the second order L-moments of each sample.
   
   The distribution of `V` under the null hypothesis of homogeneity is estimated through simulation. The type of simulation is determined by the argument `type`. When `type = 'HW'`, a four parameter Kappa distribution is fit to the pooled sample and simulations are drawn from the fitted distribution. All other values of `r type` correspond to non parametric simulation. `type = 'B'` (the default) corresponds to bootstrap, `type = 'M'` corresponds to permutations, `type = 'Ys'` to polya resampling used to directly draw the sites and `type = 'Yr'` to Polya resampling used *a priori* to simulate a new sample from which sites are drawn. 
+  
+  The function needs packages `lmomRFA` and `lmomco` installed.
 
 ### Value
   A list containing the components:
@@ -45,6 +47,7 @@
 ### Examples
   ```
   library(lmomRFA)
+  library(lmomco)
   data(Maxwind)
 
   # Bootstrap simulations
